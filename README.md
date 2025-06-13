@@ -1,1 +1,1 @@
-# veo3promptgenerator
+# VEO3promptgenerator
