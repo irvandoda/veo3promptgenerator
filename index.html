@@ -23,48 +23,66 @@
             </div>
         </div>
 
-        <div class="form-container">
-            <div class="form-column">
-                <label for="judul_scene">1. Judul Scene</label>
-                <input type="text" id="judul_scene" placeholder="Contoh: terminal bus malam">
+        <form id="prompt-form">
+            <div class="form-container">
+                <div class="form-column">
+                    <label for="judul_scene">1. Judul Scene</label>
+                    <textarea id="judul_scene" rows="1">Terminal bus malam</textarea>
 
-                <label for="deskripsi_karakter">2. Deskripsi Karakter Inti</label>
-                <textarea id="deskripsi_karakter" rows="8" placeholder="Contoh: Seorang vlogger wanita muda asal Minang berusia 27 tahun.&#10;Perawakan/Bentuk Tubuh: tubuh mungil, tinggi 158cm..."></textarea>
+                    <label for="deskripsi_karakter">2. Deskripsi Karakter Inti</label>
+                    <textarea id="deskripsi_karakter" rows="8">Seorang vlogger wanita muda asal Minang berusia 27 tahun.
+Perawakan/Bentuk Tubuh: tubuh mungil, tinggi 158cm, bentuk badan proporsional.
+warna kulit: sawo matang cerah.
+Rambut: ikal sebahu, hitam kecokelatan, diikat setengah ke belakang.
+Wajah: wajah oval, alis tebal alami, mata hitam besar, senyum ramah, pipi merona, bibir natural dengan sentuhan lip tint.
+Pakaian: mengenakan jaket parasut warna kuning mustard dan celana panjang hitam, membawa ransel kecil.</textarea>
 
-                <label for="detail_suara">3. Detail Suara Karakter</label>
-                <textarea id="detail_suara" rows="6" placeholder="Contoh: Dia berbicara dengan suara wanita muda yang hangat dan penuh semangat.&#10;Nada: mezzo-soprano..."></textarea>
+                    <label for="detail_suara">3. Detail Suara Karakter</label>
+                    <textarea id="detail_suara" rows="6">Dia berbicara dengan suara wanita muda yang hangat dan penuh semangat.
+Nada: mezzo-soprano.
+Timbre: bersahabat dan enerjik.
+Aksen/Logat: logat Indonesia dengan sentuhan khas Minang halus, berbicara murni dalam Bahasa Indonesia.
+Cara Berbicara: tempo sedang-cepat, gaya bicara lincah dan ekspresif.
+PENTING: Seluruh dialog harus dalam Bahasa Indonesia dengan pengucapan natural dan jelas. Pastikan suara karakter ini konsisten di seluruh video.</textarea>
 
-                <label for="aksi_karakter">4. Aksi Karakter</label>
-                <textarea id="aksi_karakter" rows="3" placeholder="Contoh: berjalan di sekitar terminal bus malam sambil melihat-lihat..."></textarea>
+                    <label for="aksi_karakter">4. Aksi Karakter</label>
+                    <textarea id="aksi_karakter" rows="2">berjalan di sekitar terminal bus malam sambil melihat-lihat aktivitas penumpang dan pedagang.</textarea>
 
-                <label for="ekspresi_karakter">5. Ekspresi Karakter</label>
-                <textarea id="ekspresi_karakter" rows="3" placeholder="Contoh: Karakter menunjukkan ekspresi kagum dan antusias, sering tersenyum..."></textarea>
-                 
-                <label for="dialog_karakter">10. Dialog Karakter</label>
-                <textarea id="dialog_karakter" rows="4" placeholder="Contoh: DIALOG dalam Bahasa Indonesia: Karakter berkata: Tiap kota punya terminal kayak gini..."></textarea>
+                    <label for="ekspresi_karakter">5. Ekspresi Karakter</label>
+                    <textarea id="ekspresi_karakter" rows="2">Karakter menunjukkan ekspresi kagum dan antusias, sering tersenyum sambil melirik kamera.</textarea>
+
+                    <label for="latar_tempat_waktu">6. Latar Tempat & Waktu</label>
+                    <textarea id="latar_tempat_waktu" rows="3">latar tempat: di terminal bus antar kota malam hari, terdapat pedagang kaki lima di pinggir jalur keberangkatan, beberapa bus berjajar dengan lampu menyala.
+Waktu: malam hari, hujan rintik-rintik.</textarea>
+                </div>
+                <div class="form-column">
+                    <label for="detail_visual_tambahan">7. Detail Visual Tambahan (Termasuk Gerakan Kamera)</label>
+                    <label for="gerakan_kamera">Pilih Gerakan Kamera:</label>
+                    <select id="gerakan_kamera">
+                        <!-- Options will be populated by script.js -->
+                    </select>
+                    <textarea id="detail_visual_tambahan" rows="5">Gerakan Kamera: kamera tracking shot dari belakang karakter lalu menyamping dan ke depan, mengikuti langkahnya secara sinematik.
+Pencahayaan: natural dari lampu jalan dan lampu bus, pantulan cahaya pada aspal basah.
+Gaya Video/Art Style: cinematic realistis.
+Kualitas Visual: Resolusi 4K.</textarea>
+
+                    <label for="suasana">8. Suasana Keseluruhan</label>
+                    <textarea id="suasana" rows="2">Suasana sibuk, ramai, dengan kesan perjalanan malam yang hidup dan dinamis meskipun hujan.</textarea>
+
+                    <label for="suara_lingkungan">9. Suara Lingkungan/Ambience</label>
+                    <textarea id="suara_lingkungan" rows="2">SOUND: suara mesin bus menyala, pengumuman dari pengeras suara, derai hujan ringan, dan percakapan samar antar penumpang dan pedagang.</textarea>
+
+                    <label for="dialog_karakter">10. Dialog Karakter</label>
+                    <textarea id="dialog_karakter" rows="3">DIALOG dalam Bahasa Indonesia: Karakter berkata: Tiap kota punya terminal kayak gini, dan aku suka banget suasana malamnya… hangat walau gerimis begini. Rasanya kayak perjalanan baru mau dimulai.</textarea>
+
+                    <label for="negative_prompt">11. Negative Prompt</label>
+                    <textarea id="negative_prompt" rows="3">Hindari: teks di layar, subtitle, tulisan di video, font, logo, distorsi, artefak, anomali, wajah ganda, anggota badan cacat, tangan tidak normal, orang tambahan, objek mengganggu, kualitas rendah, buram, glitch, suara robotik, suara pecah.</textarea>
+                </div>
             </div>
-            <div class="form-column">
-                <label for="latar_tempat_waktu">6. Latar Tempat & Waktu</label>
-                <textarea id="latar_tempat_waktu" rows="4" placeholder="Contoh: latar tempat: di terminal bus antar kota malam hari..."></textarea>
+        </form>
 
-                <label for="detail_visual">7. Detail Visual Tambahan</label>
-                <select id="gerakan_kamera">
-                    <option value="">-- Pilih Gerakan Kamera --</option>
-                </select>
-                <textarea id="detail_visual_tambahan" rows="5" placeholder="Pencahayaan: natural dari lampu jalan...&#10;Gaya Video/Art Style: cinematic realistis...&#10;Kualitas Visual: Resolusi 4K..."></textarea>
-
-                <label for="suasana">8. Suasana Keseluruhan</label>
-                <textarea id="suasana" rows="3" placeholder="Contoh: Suasana sibuk, ramai, dengan kesan perjalanan malam yang hidup..."></textarea>
-
-                <label for="suara_lingkungan">9. Suara Lingkungan/Ambience</label>
-                <textarea id="suara_lingkungan" rows="3" placeholder="Contoh: SOUND: suara mesin bus menyala, pengumuman dari pengeras suara..."></textarea>
-
-                <label for="negative_prompt">11. Negative Prompt</label>
-                <textarea id="negative_prompt" rows="4" placeholder="Contoh: Hindari: teks di layar, subtitle, tulisan di video, font, logo..."></textarea>
-            </div>
-        </div>
-        
-        <button id="generate-btn">Buat Prompt</button>
+        <button type="button" id="generate-btn">Buat Prompt</button>
+        <button type="reset" form="prompt-form" id="reset-btn">Reset Form</button>
 
         <div class="output-container">
             <div class="output-column">
