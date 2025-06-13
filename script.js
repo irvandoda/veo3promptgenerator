@@ -174,8 +174,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const clearOutputs = () => {
+        document.getElementById('output-indonesia').value = '';
+        document.getElementById('output-inggris').value = '';
+    };
+
     // --- Event Listeners ---
     document.getElementById('generate-btn').addEventListener('click', generatePrompt);
     document.getElementById('change-title-btn').addEventListener('click', changeTitle);
     document.getElementById('change-style-btn').addEventListener('click', changeStyle);
+    document.getElementById('reset-btn').addEventListener('click', clearOutputs);
 }); 
